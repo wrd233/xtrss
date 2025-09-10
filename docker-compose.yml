@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web-scraper:
+    build: .
+    container_name: python-web-scraper
+    volumes:
+      - ./output:/app/output
+      - ./webs.txt:/app/webs.txt:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - scraper-network
+    restart: unless-stopped
+
+networks:
+  scraper-network:
+    driver: bridge
