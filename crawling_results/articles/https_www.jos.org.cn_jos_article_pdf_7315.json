@@ -1,0 +1,14 @@
+{
+  "url": "https://www.jos.org.cn/jos/article/pdf/7315",
+  "website_type": "journal",
+  "attempts": [
+    {
+      "error": "expected name token at '<![\\x1d_\\x19)?R(0\\x1e1F,4{V\\x1f\\x14'",
+      "method": "basic_requests",
+      "success": false
+    }
+  ],
+  "success": false,
+  "final_method": null,
+  "final_content": null
+}

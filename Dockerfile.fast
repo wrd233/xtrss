@@ -1,0 +1,30 @@
+FROM python:3.11-slim
+
+# Install only essential dependencies
+RUN apt-get update && apt-get install -y \
+    wget \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy requirements first (for better caching)
+COPY requirements.txt .
+
+# Install Python dependencies with fallback strategy
+RUN pip install --no-cache-dir --timeout 30 -r requirements.txt || \
+    (pip install --no-cache-dir requests beautifulsoup4 lxml html2text fake-useragent \
+     trafilatura newspaper3k readability-lxml selenium aiohttp pandas python-dateutil)
+
+# Copy application code
+COPY . .
+
+# Create output directories
+RUN mkdir -p /app/output/articles /app/output/reports /app/results
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PIP_TIMEOUT=60
+
+# Run the scraper
+CMD ["python3", "main.py"]
