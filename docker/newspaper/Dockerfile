@@ -26,8 +26,13 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD python3 -c "import newspaper; print('OK')" || exit 1
 
 # 入口脚本
-COPY entrypoint.sh /app/
+COPY docker/newspaper/entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
 
-ENTRYPOINT ["/app/entrypoint.sh"]
-CMD ["python3", "newspaper_scraper.py"]
+# 启动脚本
+COPY docker/newspaper/start.sh /app/
+RUN chmod +x /app/start.sh
+
+# ENTRYPOINT ["/app/entrypoint.sh"]
+# CMD ["python3", "newspaper_scraper.py"]
+ENTRYPOINT ["/app/start.sh"]

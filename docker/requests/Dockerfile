@@ -22,9 +22,9 @@ VOLUME ["/app/results"]
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD python3 -c "import requests; print('OK')" || exit 1
 
-# 入口脚本
-COPY entrypoint.sh /app/
-RUN chmod +x /app/entrypoint.sh
+# 复制启动脚本
+COPY docker/requests/start.sh /app/
+RUN chmod +x /app/start.sh
 
-ENTRYPOINT ["/app/entrypoint.sh"]
-CMD ["python3", "requests_scraper.py"]
+# 入口脚本（使用新的start.sh）
+ENTRYPOINT ["/app/start.sh"]

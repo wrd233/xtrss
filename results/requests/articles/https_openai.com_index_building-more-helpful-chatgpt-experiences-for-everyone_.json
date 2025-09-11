@@ -1,0 +1,5 @@
+{
+  "error": "403 Client Error: Forbidden for url: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/",
+  "method": "requests_beautifulsoup",
+  "success": false
+}

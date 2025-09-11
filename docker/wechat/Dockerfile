@@ -24,8 +24,13 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
     CMD python3 -c "from selenium import webdriver; from selenium.webdriver.chrome.options import Options; options = Options(); options.add_argument('--headless'); print('OK')" || exit 1
 
 # 入口脚本
-COPY entrypoint.sh /app/
+COPY docker/wechat/entrypoint.sh /app/
 RUN chmod +x /app/entrypoint.sh
 
-ENTRYPOINT ["/app/entrypoint.sh"]
-CMD ["python3", "wechat_scraper.py"]
+# 启动脚本
+COPY docker/wechat/start.sh /app/
+RUN chmod +x /app/start.sh
+
+# ENTRYPOINT ["/app/entrypoint.sh"]
+# CMD ["python3", "wechat_scraper.py"]
+ENTRYPOINT ["/app/start.sh"]

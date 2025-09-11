@@ -1,0 +1,5 @@
+{
+  "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+  "method": "requests_beautifulsoup",
+  "success": false
+}

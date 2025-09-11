@@ -17,7 +17,7 @@ services:
     depends_on:
       - scraper-base
     volumes:
-      - ./results/requests:/app/results
+      - ./results:/results
       - ./webs.txt:/app/webs.txt:ro
     environment:
       - PYTHONUNBUFFERED=1
