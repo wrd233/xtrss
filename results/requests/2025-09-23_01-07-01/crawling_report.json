@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "generated_at": "2025-09-23T01:07:55.873940",
+    "total_urls": 25,
+    "successful_scrapes": 18,
+    "failed_scrapes": 7,
+    "duration_seconds": 53.826574,
+    "average_time_per_url": 2.15306296
+  },
+  "summary": {
+    "website_types": {
+      "general": {
+        "total": 5,
+        "success": 3
+      },
+      "wechat": {
+        "total": 8,
+        "success": 8
+      },
+      "cctv": {
+        "total": 1,
+        "success": 1
+      },
+      "government": {
+        "total": 3,
+        "success": 2
+      },
+      "bjnews": {
+        "total": 1,
+        "success": 1
+      },
+      "academic": {
+        "total": 1,
+        "success": 1
+      },
+      "baidu_baijiahao": {
+        "total": 2,
+        "success": 0
+      },
+      "thepaper": {
+        "total": 1,
+        "success": 1
+      },
+      "journal": {
+        "total": 2,
+        "success": 0
+      },
+      "sohu": {
+        "total": 1,
+        "success": 1
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "url": "https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/",
+      "website_type": "general",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 0,
+      "error": "403 Client Error: Forbidden for url: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/",
+      "status_code": 0
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 1505,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261",
+      "website_type": "general",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "OpenAI announces ChatGPT parental controls following family's lawsuit - ABC News",
+      "description": "The company says it plans to roll out the new features within the next 120 days.",
+      "content_length": 2629,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 1526,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml",
+      "website_type": "cctv",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "AI标识来了 9月1日起AI生成合成内容必须添加标识 多家平台已落实_新闻频道_央视网(cctv.com)",
+      "description": "从9月1日起，国家网信办等四部门联合发布的人工智能生成合成内容标识办法正式施行。要求所有AI生成的文字、图片、视频等内容必须亮明身份，防止虚假信息传播。",
+      "content_length": 451,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml",
+      "website_type": "government",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "《“人工智能+交通运输”实施意见》经部务会审议通过 加快推动人工智能在交通运输领域规模化创新应用-长江航务管理局",
+      "description": "",
+      "content_length": 551,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/",
+      "website_type": "general",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "How is artificial intelligence affecting job searches? - CBS News",
+      "description": "AI has already become a disruptor in the labor market, as job postings declined over the past year by 6.7%, with entry-level positions especially hard-hit. But not all industries are affected by the push for AI.",
+      "content_length": 7538,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.bjnews.com.cn/detail/1756906307129472.html",
+      "website_type": "bjnews",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "不只震撼，九三阅兵还有这些“首次” — 新京报",
+      "description": "新京报以文字、图片、视频等全媒体形式，为用户提供全天候热点新闻，涵盖突发新闻、时事、财经、娱乐、体育，以及评论、杂志和博客等，新京报网本着品质源于责任的的信念,致力于成为用户喜爱的精品新闻网站。",
+      "content_length": 4433,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://news.66wz.com/system/2025/09/04/105698673.shtml",
+      "website_type": "general",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "温州市揭牌设立市人工智能局 加快建设人工智能创新发展先行市-新闻中心-温州网",
+      "description": "　　温州网讯抢抓AI机遇、抢滩AI赛道、拥抱AI时代，9月3日下午，全市人工智能创新发展大会举行。副省长、市委书记张振丰在会上强调，要深入贯彻落实习近平总书记关于人工智能的重要论述和考察浙江重要讲话精神，按照省委全会、市委全会的部署要求，深入实施人工智能+行动，聚全市之力建设人工智能创新发展先行市，为提速...",
+      "content_length": 2374,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://ieeexplore.ieee.org/document/10844369",
+      "website_type": "academic",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "A Semi-Supervised Active Learning Neural Network for Data Streams With Concept Drift | IEEE Journals & Magazine | IEEE Xplore",
+      "description": "",
+      "content_length": 705,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.cac.gov.cn/2025-08/27/c_1758018277755538.htm",
+      "website_type": "government",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "国务院关于深入实施“人工智能+”行动的意见_中央网络安全和信息化委员会办公室",
+      "description": "",
+      "content_length": 5022,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://baijiahao.baidu.com/s?id=1841445630212847979&wfr=spider&for=pc",
+      "website_type": "baidu_baijiahao",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "百度安全验证",
+      "description": "",
+      "content_length": 21,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.thepaper.cn/newsDetail_forward_31479069",
+      "website_type": "thepaper",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "马斯克和奥特曼又起冲突，xAI起诉苹果和OpenAI“串通”垄断_未来2%_澎湃新闻-The Paper",
+      "description": "亿万富翁马斯克旗下AI初创公司xAI日前起诉苹果公司和OpenAI，指控其反竞争合谋损害马斯克的社交媒体平台X与聊天机器人Grok，打压人工智能领域的竞争对手。",
+      "content_length": 1608,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650986961&idx=2&sn=00d3c32b9b44fc02da6ca3602ad1a90a&chksm=84e71dafb39094b9253035787f59e0ffb440b3fa139f6a35b0ede8751c160ced1d5822d305ad#rd",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "模型基础，科研成果就不基础。",
+      "content_length": 3581,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://baijiahao.baidu.com/s?id=1841605785521578036&wfr=spider&for=pc",
+      "website_type": "baidu_baijiahao",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "百度安全验证",
+      "description": "",
+      "content_length": 21,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/9Mnl0uHj5xCzM5rTdItN6Q",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "2025中控技术全球新品发布暨工业AI创新发展大会在杭州成功举办",
+      "content_length": 1886,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 1131,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "真正的“数字人”不应只是声音与动作的机械复现，更应具备情感理解、个性表达与智能交互的能力。",
+      "content_length": 1822,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.jos.org.cn/jos/article/pdf/7264",
+      "website_type": "journal",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 0,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.sohu.com/a/929376834_485557?scm=10001.341_14-200000.0.0.&spm=smpc.channel_218.block4_113_ugzL7M_1_fd.3.17563669356540qDzYUG_499",
+      "website_type": "sohu",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "黄仁勋：Blackwell芯片“确实有可能”入华，看好中国AI市场明年增50%_美国政府_人工智能_公司",
+      "description": "8月，白宫宣布，美国总统唐纳德·特朗普与黄仁勋已达成协议：英伟达将获得H20芯片出口许可，作为交换，该芯片在中国市场销售额的15%需上缴美国政府。为遵守美国出口管制规定，英伟达需对面向中国市场的Blackwe…",
+      "content_length": 564,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "结合合成数据与强化学习的推理检索新框架BGE-Reasoner",
+      "content_length": 3550,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports",
+      "website_type": "general",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 0,
+      "error": "HTTPSConnectionPool(host='money.usnews.com', port=443): Read timed out. (read timeout=30)",
+      "status_code": 0
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd",
+      "website_type": "wechat",
+      "success": true,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "四两拨千斤",
+      "content_length": 2281,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.gov.cn/zhengce/content/202508/content_7037861.htm",
+      "website_type": "government",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "国务院关于深入实施“人工智能+”行动的意见_科技_中国政府网",
+      "description": "为深入实施“人工智能+”行动，推动人工智能与经济社会各行业各领域广泛深度融合，重塑人类生产生活范式，促进生产力革命性跃迁和生产关系深层次变革，加快形成人机协同、跨界融合、共创分享的智能经济和智能社会新形态，现提出如下意见。",
+      "content_length": 62,
+      "error": "",
+      "status_code": 200
+    },
+    {
+      "url": "https://www.jos.org.cn/jos/article/pdf/7315",
+      "website_type": "journal",
+      "success": false,
+      "method": "requests_beautifulsoup",
+      "title": "",
+      "description": "",
+      "content_length": 0,
+      "error": "",
+      "status_code": 200
+    }
+  ]
+}

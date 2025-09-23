@@ -1,0 +1,10 @@
+{
+  "url": "https://www.jos.org.cn/jos/article/pdf/7315",
+  "title": "",
+  "description": "",
+  "content": "",
+  "website_type": "journal",
+  "method": "requests_beautifulsoup",
+  "status_code": 200,
+  "success": false
+}

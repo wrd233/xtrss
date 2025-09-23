@@ -1,0 +1,7 @@
+{
+  "url": "https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports",
+  "website_type": "general",
+  "error": "HTTPSConnectionPool(host='money.usnews.com', port=443): Read timed out. (read timeout=30)",
+  "method": "requests_beautifulsoup",
+  "success": false
+}

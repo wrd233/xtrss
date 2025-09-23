@@ -1,0 +1,136 @@
+version: '3.8'
+
+services:
+  # 基础镜像构建服务
+  scraper-base:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    image: scraper-base:latest
+    command: echo "Base image built successfully"
+
+  # Requests Scraper
+  requests-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/requests/Dockerfile
+    depends_on:
+      - scraper-base
+    volumes:
+      - ../data/output:/app/data/output
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - scraper-network
+
+  # Trafilatura Scraper
+  trafilatura-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/trafilatura/Dockerfile
+    depends_on:
+      - scraper-base
+    volumes:
+      - ../results/trafilatura:/results
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - scraper-network
+
+  # Newspaper3k Scraper
+  newspaper-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/newspaper/Dockerfile
+    depends_on:
+      - scraper-base
+    volumes:
+      - ../results/newspaper:/results
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - scraper-network
+
+  # Readability Scraper
+  readability-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/readability/Dockerfile
+    depends_on:
+      - scraper-base
+    volumes:
+      - ../results/readability:/results
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - scraper-network
+
+  # Selenium Scraper
+  selenium-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/selenium/Dockerfile
+    depends_on:
+      - scraper-base
+    volumes:
+      - ../results/selenium:/results
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+      - /dev/shm:/dev/shm  # 共享内存，提高Chrome性能
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DISPLAY=:99
+    restart: unless-stopped
+    networks:
+      - scraper-network
+    shm_size: 2gb  # 增加共享内存大小
+
+  # WeChat Scraper
+  wechat-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/wechat/Dockerfile
+    depends_on:
+      - selenium-scraper
+    volumes:
+      - ../results/wechat:/results
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+      - /dev/shm:/dev/shm
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DISPLAY=:99
+    restart: unless-stopped
+    networks:
+      - scraper-network
+    shm_size: 2gb
+
+  # Government Scraper
+  government-scraper:
+    build:
+      context: ..
+      dockerfile: deployment/docker/government/Dockerfile
+    depends_on:
+      - scraper-base
+    volumes:
+      - ../results/government:/results
+      - ../data/input/webs.txt:/app/data/input/webs.txt:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    networks:
+      - scraper-network
+
+networks:
+  scraper-network:
+    driver: bridge
+
+volumes:
+  scraper-results:
+    driver: local
