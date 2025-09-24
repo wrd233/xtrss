@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# 安装Python依赖
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 复制应用代码
+COPY . .
+
+# 创建日志目录
+RUN mkdir -p /app/logs
+
+# 设置环境变量
+ENV PYTHONPATH=/app:$PYTHONPATH
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=development
+
+# 暴露端口
+EXPOSE 5000
+
+# 启动命令
+CMD ["python", "app.py"]

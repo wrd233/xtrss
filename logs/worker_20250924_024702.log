@@ -1,0 +1,42 @@
+2025-09-24 02:47:02,224 - redis_client - INFO - Redis连接成功
+2025-09-24 02:47:02,224 - __main__ - INFO - Worker初始化完成，类型: requests
+2025-09-24 02:47:02,225 - __main__ - INFO - Worker开始运行...
+2025-09-24 02:50:03,412 - __main__ - INFO - 获取到新任务: 35279438-fe7c-4997-9fbd-9079ce5e87cc
+2025-09-24 02:50:03,412 - __main__ - INFO - 开始处理任务: 35279438-fe7c-4997-9fbd-9079ce5e87cc
+2025-09-24 02:50:03,414 - redis_client - INFO - 更新任务状态: 35279438-fe7c-4997-9fbd-9079ce5e87cc -> processing
+2025-09-24 02:50:03,414 - __main__ - INFO - 任务详情: 3个URL, 类型: requests
+2025-09-24 02:50:03,415 - redis_client - INFO - 更新任务状态: 35279438-fe7c-4997-9fbd-9079ce5e87cc -> processing
+2025-09-24 02:50:03,415 - scraper_adapter - INFO - 开始爬取任务: 3个URL, 类型: requests
+2025-09-24 02:50:03,416 - simple_scraper - INFO - 爬取进度: 1/3 - https://example.com
+2025-09-24 02:50:03,416 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 02:50:08,172 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 02:50:08,172 - simple_scraper - INFO - 爬取进度: 2/3 - https://httpbin.org/html
+2025-09-24 02:50:08,172 - simple_scraper - INFO - 开始爬取: https://httpbin.org/html
+2025-09-24 02:50:13,359 - simple_scraper - INFO - 爬取成功: https://httpbin.org/html, 标题: 无标题
+2025-09-24 02:50:13,359 - simple_scraper - INFO - 爬取进度: 3/3 - https://httpbin.org/json
+2025-09-24 02:50:13,359 - simple_scraper - INFO - 开始爬取: https://httpbin.org/json
+2025-09-24 02:50:15,410 - simple_scraper - INFO - 爬取成功: https://httpbin.org/json, 标题: 无标题
+2025-09-24 02:50:15,413 - scraper_adapter - INFO - 爬取任务完成: 成功3个, 失败0个
+2025-09-24 02:50:15,414 - redis_client - INFO - 更新任务状态: 35279438-fe7c-4997-9fbd-9079ce5e87cc -> processing
+2025-09-24 02:50:15,415 - redis_client - INFO - 存储结果成功: 35279438-fe7c-4997-9fbd-9079ce5e87cc, 共3条结果
+2025-09-24 02:50:15,415 - redis_client - INFO - 更新任务状态: 35279438-fe7c-4997-9fbd-9079ce5e87cc -> completed
+2025-09-24 02:50:15,416 - __main__ - INFO - 任务完成: 35279438-fe7c-4997-9fbd-9079ce5e87cc, 结果数: 3
+2025-09-24 02:50:15,416 - __main__ - INFO - 任务处理成功: 35279438-fe7c-4997-9fbd-9079ce5e87cc
+2025-09-24 02:51:45,951 - __main__ - INFO - 获取到新任务: fb48cbb5-b96d-4809-9e46-40d0a60e2d54
+2025-09-24 02:51:45,951 - __main__ - INFO - 开始处理任务: fb48cbb5-b96d-4809-9e46-40d0a60e2d54
+2025-09-24 02:51:45,953 - redis_client - INFO - 更新任务状态: fb48cbb5-b96d-4809-9e46-40d0a60e2d54 -> processing
+2025-09-24 02:51:45,953 - __main__ - INFO - 任务详情: 2个URL, 类型: requests
+2025-09-24 02:51:45,953 - redis_client - INFO - 更新任务状态: fb48cbb5-b96d-4809-9e46-40d0a60e2d54 -> processing
+2025-09-24 02:51:45,953 - scraper_adapter - INFO - 开始爬取任务: 2个URL, 类型: requests
+2025-09-24 02:51:45,953 - simple_scraper - INFO - 爬取进度: 1/2 - https://example.com
+2025-09-24 02:51:45,954 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 02:51:50,955 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 02:51:50,956 - simple_scraper - INFO - 爬取进度: 2/2 - https://httpbin.org/html
+2025-09-24 02:51:50,956 - simple_scraper - INFO - 开始爬取: https://httpbin.org/html
+2025-09-24 02:51:56,126 - simple_scraper - INFO - 爬取成功: https://httpbin.org/html, 标题: 无标题
+2025-09-24 02:51:56,129 - scraper_adapter - INFO - 爬取任务完成: 成功2个, 失败0个
+2025-09-24 02:51:56,130 - redis_client - INFO - 更新任务状态: fb48cbb5-b96d-4809-9e46-40d0a60e2d54 -> processing
+2025-09-24 02:51:56,131 - redis_client - INFO - 存储结果成功: fb48cbb5-b96d-4809-9e46-40d0a60e2d54, 共2条结果
+2025-09-24 02:51:56,132 - redis_client - INFO - 更新任务状态: fb48cbb5-b96d-4809-9e46-40d0a60e2d54 -> completed
+2025-09-24 02:51:56,132 - __main__ - INFO - 任务完成: fb48cbb5-b96d-4809-9e46-40d0a60e2d54, 结果数: 2
+2025-09-24 02:51:56,132 - __main__ - INFO - 任务处理成功: fb48cbb5-b96d-4809-9e46-40d0a60e2d54

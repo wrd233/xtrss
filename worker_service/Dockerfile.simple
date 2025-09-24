@@ -1,0 +1,22 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# 安装Python依赖
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 复制应用代码
+COPY . .
+
+# 创建日志目录
+RUN mkdir -p /app/logs
+
+# 设置环境变量
+ENV PYTHONPATH=/app:$PYTHONPATH
+ENV WORKER_TYPE=requests
+ENV MAX_WORKERS=3
+ENV POLL_INTERVAL=5
+
+# 启动命令
+CMD ["python", "worker.py"]
