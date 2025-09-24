@@ -11,6 +11,10 @@ class TaskStatus(str, Enum):
 
 class ScraperType(str, Enum):
     REQUESTS = "requests"
+    NEWSPAPER = "newspaper"
+    READABILITY = "readability"
+    TRAFILATURA = "trafilatura"
+    RACE = "race"  # 竞速模式 - 多个爬虫同时尝试
 
 class ScrapeRequest(BaseModel):
     urls: List[str] = Field(..., min_items=1, max_items=100, description="要爬取的URL列表")

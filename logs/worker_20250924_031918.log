@@ -1,0 +1,117 @@
+2025-09-24 03:19:18,239 - __main__ - INFO - 启动普通Worker模式: readability
+2025-09-24 03:19:18,251 - redis_client - INFO - Redis连接成功
+2025-09-24 03:19:18,252 - __main__ - INFO - Worker初始化完成，类型: readability
+2025-09-24 03:19:18,252 - __main__ - INFO - Worker开始运行...
+2025-09-24 03:19:18,301 - __main__ - INFO - 启动普通Worker模式: requests
+2025-09-24 03:19:18,305 - redis_client - INFO - Redis连接成功
+2025-09-24 03:19:18,305 - __main__ - INFO - Worker初始化完成，类型: requests
+2025-09-24 03:19:18,306 - __main__ - INFO - Worker开始运行...
+2025-09-24 03:19:18,504 - __main__ - INFO - 启动竞速Worker模式
+2025-09-24 03:19:18,514 - redis_client - INFO - Redis连接成功
+2025-09-24 03:19:18,515 - race_worker - INFO - RaceWorker初始化完成，支持的爬虫: ['requests', 'newspaper', 'readability', 'trafilatura']
+2025-09-24 03:19:18,515 - race_worker - INFO - RaceWorker开始运行...
+2025-09-24 03:19:18,533 - __main__ - INFO - 启动普通Worker模式: newspaper
+2025-09-24 03:19:18,536 - redis_client - INFO - Redis连接成功
+2025-09-24 03:19:18,536 - __main__ - INFO - Worker初始化完成，类型: newspaper
+2025-09-24 03:19:18,537 - __main__ - INFO - Worker开始运行...
+2025-09-24 03:19:18,554 - __main__ - INFO - 启动普通Worker模式: trafilatura
+2025-09-24 03:19:18,556 - redis_client - INFO - Redis连接成功
+2025-09-24 03:19:18,556 - __main__ - INFO - Worker初始化完成，类型: trafilatura
+2025-09-24 03:19:18,557 - __main__ - INFO - Worker开始运行...
+2025-09-24 03:24:39,224 - __main__ - INFO - 获取到新任务: 86395bd9-894f-4bab-987b-df37c78c089c
+2025-09-24 03:24:39,224 - __main__ - INFO - 开始处理任务: 86395bd9-894f-4bab-987b-df37c78c089c
+2025-09-24 03:24:39,226 - redis_client - INFO - 更新任务状态: 86395bd9-894f-4bab-987b-df37c78c089c -> processing
+2025-09-24 03:24:39,227 - __main__ - INFO - 任务详情: 5个URL, 类型: requests
+2025-09-24 03:24:39,228 - redis_client - INFO - 更新任务状态: 86395bd9-894f-4bab-987b-df37c78c089c -> processing
+2025-09-24 03:24:39,228 - scraper_adapter - INFO - 开始爬取任务: 5个URL, 类型: requests
+2025-09-24 03:24:39,229 - simple_scraper - INFO - 爬取进度: 1/5 - https://example.com
+2025-09-24 03:24:39,229 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 03:24:43,989 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 03:24:43,989 - simple_scraper - INFO - 爬取进度: 2/5 - https://httpbin.org/status/404
+2025-09-24 03:24:43,989 - simple_scraper - INFO - 开始爬取: https://httpbin.org/status/404
+2025-09-24 03:24:53,353 - simple_scraper - ERROR - 爬取失败: https://httpbin.org/status/404 - 404 Client Error: NOT FOUND for url: https://httpbin.org/status/404
+2025-09-24 03:24:53,354 - simple_scraper - INFO - 爬取进度: 3/5 - https://httpbin.org/delay/10
+2025-09-24 03:24:53,354 - simple_scraper - INFO - 开始爬取: https://httpbin.org/delay/10
+2025-09-24 03:25:04,576 - simple_scraper - INFO - 爬取成功: https://httpbin.org/delay/10, 标题: 无标题
+2025-09-24 03:25:04,576 - simple_scraper - INFO - 爬取进度: 4/5 - https://httpbin.org/html
+2025-09-24 03:25:04,576 - simple_scraper - INFO - 开始爬取: https://httpbin.org/html
+2025-09-24 03:25:05,888 - simple_scraper - INFO - 爬取成功: https://httpbin.org/html, 标题: 无标题
+2025-09-24 03:25:05,889 - simple_scraper - INFO - 爬取进度: 5/5 - https://invalid-domain-12345.com
+2025-09-24 03:25:05,889 - simple_scraper - INFO - 开始爬取: https://invalid-domain-12345.com
+2025-09-24 03:25:14,545 - simple_scraper - ERROR - 爬取失败: https://invalid-domain-12345.com - HTTPSConnectionPool(host='invalid-domain-12345.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7bccec5372d0>: Failed to resolve 'invalid-domain-12345.com' ([Errno -2] Name or service not known)"))
+2025-09-24 03:25:14,545 - scraper_adapter - INFO - 爬取任务完成: 成功3个, 失败2个
+2025-09-24 03:25:14,545 - __main__ - INFO - 爬取完成: 成功3/5 (成功率: 60.0%)
+2025-09-24 03:25:14,547 - redis_client - INFO - 更新任务状态: 86395bd9-894f-4bab-987b-df37c78c089c -> processing
+2025-09-24 03:25:14,548 - redis_client - INFO - 存储结果成功: 86395bd9-894f-4bab-987b-df37c78c089c, 共5条结果
+2025-09-24 03:25:14,549 - redis_client - INFO - 更新任务状态: 86395bd9-894f-4bab-987b-df37c78c089c -> completed
+2025-09-24 03:25:14,549 - __main__ - INFO - 任务完成: 86395bd9-894f-4bab-987b-df37c78c089c, 结果数: 5
+2025-09-24 03:25:14,549 - __main__ - INFO - 任务处理成功: 86395bd9-894f-4bab-987b-df37c78c089c
+2025-09-24 03:29:21,958 - __main__ - INFO - 获取到新任务: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b
+2025-09-24 03:29:21,958 - __main__ - INFO - 开始处理任务: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b
+2025-09-24 03:29:21,961 - __main__ - INFO - 跳过任务 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b: 类型不匹配 (requests vs readability)
+2025-09-24 03:29:21,961 - __main__ - INFO - 获取到新任务: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b
+2025-09-24 03:29:21,961 - __main__ - INFO - 开始处理任务: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b
+2025-09-24 03:29:21,962 - __main__ - INFO - 任务处理成功: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b
+2025-09-24 03:29:21,963 - redis_client - INFO - 更新任务状态: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b -> processing
+2025-09-24 03:29:21,963 - __main__ - INFO - 任务详情: 2个URL, 类型: requests
+2025-09-24 03:29:21,963 - redis_client - INFO - 更新任务状态: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b -> processing
+2025-09-24 03:29:21,964 - scraper_adapter - INFO - 开始爬取任务: 2个URL, 类型: requests
+2025-09-24 03:29:21,966 - simple_scraper - INFO - 爬取进度: 1/2 - https://httpbin.org/status/404
+2025-09-24 03:29:21,967 - simple_scraper - INFO - 开始爬取: https://httpbin.org/status/404
+2025-09-24 03:29:29,460 - simple_scraper - ERROR - 爬取失败: https://httpbin.org/status/404 - 404 Client Error: NOT FOUND for url: https://httpbin.org/status/404
+2025-09-24 03:29:29,460 - simple_scraper - INFO - 爬取进度: 2/2 - https://example.com
+2025-09-24 03:29:29,461 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 03:29:34,198 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 03:29:34,201 - scraper_adapter - INFO - 爬取任务完成: 成功1个, 失败1个
+2025-09-24 03:29:34,202 - __main__ - INFO - 爬取完成: 成功1/2 (成功率: 50.0%)
+2025-09-24 03:29:34,203 - redis_client - INFO - 更新任务状态: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b -> processing
+2025-09-24 03:29:34,204 - redis_client - INFO - 存储结果成功: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b, 共2条结果
+2025-09-24 03:29:34,205 - redis_client - INFO - 更新任务状态: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b -> completed
+2025-09-24 03:29:34,205 - __main__ - INFO - 任务完成: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b, 结果数: 2
+2025-09-24 03:29:34,206 - __main__ - INFO - 任务处理成功: 5ab6a8bd-ff7c-47ff-9e89-c398a2ba025b
+2025-09-24 03:29:51,971 - __main__ - INFO - 获取到新任务: a47fa719-ce8e-4d98-a274-167b63395c34
+2025-09-24 03:29:51,971 - __main__ - INFO - 开始处理任务: a47fa719-ce8e-4d98-a274-167b63395c34
+2025-09-24 03:29:51,972 - redis_client - INFO - 更新任务状态: a47fa719-ce8e-4d98-a274-167b63395c34 -> processing
+2025-09-24 03:29:51,972 - __main__ - INFO - 任务详情: 6个URL, 类型: requests
+2025-09-24 03:29:51,974 - redis_client - INFO - 更新任务状态: a47fa719-ce8e-4d98-a274-167b63395c34 -> processing
+2025-09-24 03:29:51,974 - scraper_adapter - INFO - 开始爬取任务: 6个URL, 类型: requests
+2025-09-24 03:29:51,974 - simple_scraper - INFO - 爬取进度: 1/6 - https://httpbin.org/status/404
+2025-09-24 03:29:51,975 - simple_scraper - INFO - 开始爬取: https://httpbin.org/status/404
+2025-09-24 03:29:57,241 - simple_scraper - ERROR - 爬取失败: https://httpbin.org/status/404 - 404 Client Error: NOT FOUND for url: https://httpbin.org/status/404
+2025-09-24 03:29:57,241 - simple_scraper - INFO - 爬取进度: 2/6 - https://httpbin.org/status/500
+2025-09-24 03:29:57,241 - simple_scraper - INFO - 开始爬取: https://httpbin.org/status/500
+2025-09-24 03:30:00,305 - simple_scraper - ERROR - 爬取失败: https://httpbin.org/status/500 - 500 Server Error: INTERNAL SERVER ERROR for url: https://httpbin.org/status/500
+2025-09-24 03:30:00,305 - simple_scraper - INFO - 爬取进度: 3/6 - https://invalid-domain-xyz123.com
+2025-09-24 03:30:00,306 - simple_scraper - INFO - 开始爬取: https://invalid-domain-xyz123.com
+2025-09-24 03:30:09,092 - simple_scraper - ERROR - 爬取失败: https://invalid-domain-xyz123.com - HTTPSConnectionPool(host='invalid-domain-xyz123.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7bccec6d0490>: Failed to resolve 'invalid-domain-xyz123.com' ([Errno -2] Name or service not known)"))
+2025-09-24 03:30:09,092 - simple_scraper - INFO - 爬取进度: 4/6 - https://httpbin.org/delay/30
+2025-09-24 03:30:09,093 - simple_scraper - INFO - 开始爬取: https://httpbin.org/delay/30
+2025-09-24 03:30:19,613 - simple_scraper - INFO - 爬取成功: https://httpbin.org/delay/30, 标题: 无标题
+2025-09-24 03:30:19,613 - simple_scraper - INFO - 爬取进度: 5/6 - https://httpbin.org/redirect/10
+2025-09-24 03:30:19,613 - simple_scraper - INFO - 开始爬取: https://httpbin.org/redirect/10
+2025-09-24 03:30:30,257 - simple_scraper - INFO - 爬取成功: https://httpbin.org/redirect/10, 标题: 无标题
+2025-09-24 03:30:30,257 - simple_scraper - INFO - 爬取进度: 6/6 - https://example.com
+2025-09-24 03:30:30,258 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 03:30:35,102 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 03:30:35,102 - scraper_adapter - INFO - 爬取任务完成: 成功3个, 失败3个
+2025-09-24 03:30:35,102 - __main__ - INFO - 爬取完成: 成功3/6 (成功率: 50.0%)
+2025-09-24 03:30:35,104 - redis_client - INFO - 更新任务状态: a47fa719-ce8e-4d98-a274-167b63395c34 -> processing
+2025-09-24 03:30:35,105 - redis_client - INFO - 存储结果成功: a47fa719-ce8e-4d98-a274-167b63395c34, 共6条结果
+2025-09-24 03:30:35,105 - redis_client - INFO - 更新任务状态: a47fa719-ce8e-4d98-a274-167b63395c34 -> completed
+2025-09-24 03:30:35,105 - __main__ - INFO - 任务完成: a47fa719-ce8e-4d98-a274-167b63395c34, 结果数: 6
+2025-09-24 03:30:35,105 - __main__ - INFO - 任务处理成功: a47fa719-ce8e-4d98-a274-167b63395c34
+2025-09-24 03:31:41,161 - __main__ - INFO - 接收到信号 15，正在优雅关闭...
+2025-09-24 03:31:44,122 - __main__ - INFO - Worker已停止
+2025-09-24 03:31:44,123 - __main__ - INFO - 正在清理Worker资源...
+2025-09-24 03:31:51,946 - race_worker - INFO - 接收到信号 15，正在优雅关闭...
+2025-09-24 03:31:51,949 - __main__ - INFO - 接收到信号 15，正在优雅关闭...
+2025-09-24 03:31:51,953 - __main__ - INFO - 接收到信号 15，正在优雅关闭...
+2025-09-24 03:31:51,957 - __main__ - INFO - 接收到信号 15，正在优雅关闭...
+2025-09-24 03:31:52,110 - race_worker - INFO - RaceWorker已停止
+2025-09-24 03:31:52,110 - race_worker - INFO - 正在清理RaceWorker资源...
+2025-09-24 03:31:52,835 - __main__ - INFO - Worker已停止
+2025-09-24 03:31:52,836 - __main__ - INFO - 正在清理Worker资源...
+2025-09-24 03:31:52,838 - __main__ - INFO - Worker已停止
+2025-09-24 03:31:52,838 - __main__ - INFO - 正在清理Worker资源...
+2025-09-24 03:31:52,940 - __main__ - INFO - Worker已停止
+2025-09-24 03:31:52,940 - __main__ - INFO - 正在清理Worker资源...

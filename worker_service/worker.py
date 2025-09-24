@@ -82,6 +82,34 @@ class Worker:
             # 调用爬虫适配器
             results = scraper_adapter.scrape_urls(urls, scraper_type, options)
             
+            # 检查成功率
+            success_count = sum(1 for r in results if r.get('success', False))
+            total_count = len(results)
+            success_rate = success_count / total_count if total_count > 0 else 0
+            
+            logger.info(f"爬取完成: 成功{success_count}/{total_count} (成功率: {success_rate:.1%})")
+            
+            # 如果requests成功率太低，转入竞速模式
+            if scraper_type == 'requests' and success_rate < 0.7:
+                logger.warning(f"requests成功率过低({success_rate:.1%})，转入竞速模式")
+                
+                # 将任务转入竞速队列
+                self.redis_client.redis_client.lpush('race_queue', task_id)
+                
+                # 更新任务状态为竞速模式
+                self.redis_client.update_task_status(
+                    task_id, 
+                    TaskStatus.PROCESSING, 
+                    progress=95,
+                    error_message="requests成功率低，启动竞速模式"
+                )
+                
+                # 更新任务类型为竞速
+                self.redis_client.redis_client.hset(f'task:{task_id}', 'scraper_type', 'race')
+                
+                logger.info(f"任务 {task_id} 已转入竞速队列")
+                return True
+            
             # 更新进度到90%
             self.redis_client.update_task_status(
                 task_id, 
@@ -105,13 +133,31 @@ class Worker:
         except Exception as e:
             logger.error(f"处理任务失败 {task_id}: {str(e)}")
             
-            # 更新任务状态为失败
-            self.redis_client.update_task_status(
-                task_id,
-                TaskStatus.FAILED,
-                error_message=str(e)
-            )
-            return False
+            # requests失败，转入竞速模式
+            if scraper_type == 'requests':
+                logger.info(f"requests处理失败，转入竞速模式: {task_id}")
+                
+                # 将任务转入竞速队列
+                self.redis_client.redis_client.lpush('race_queue', task_id)
+                
+                # 更新任务状态和类型
+                self.redis_client.update_task_status(
+                    task_id, 
+                    TaskStatus.PROCESSING, 
+                    error_message=f"requests失败，转入竞速模式: {str(e)}"
+                )
+                self.redis_client.redis_client.hset(f'task:{task_id}', 'scraper_type', 'race')
+                
+                logger.info(f"任务 {task_id} 已转入竞速队列")
+                return True
+            else:
+                # 其他爬虫类型直接失败
+                self.redis_client.update_task_status(
+                    task_id,
+                    TaskStatus.FAILED,
+                    error_message=str(e)
+                )
+                return False
     
     def run(self):
         """运行Worker主循环"""
@@ -172,7 +218,18 @@ class Worker:
 def main():
     """主函数"""
     try:
-        worker = Worker()
+        worker_type = Config.WORKER_TYPE
+        
+        if worker_type == 'race':
+            # 运行竞速Worker
+            from race_worker import RaceWorker
+            logger.info("启动竞速Worker模式")
+            worker = RaceWorker()
+        else:
+            # 运行普通Worker
+            logger.info(f"启动普通Worker模式: {worker_type}")
+            worker = Worker()
+        
         worker.run()
     except Exception as e:
         logger.error(f"Worker启动失败: {e}")

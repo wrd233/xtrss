@@ -40,3 +40,216 @@
 2025-09-24 02:51:56,132 - redis_client - INFO - 更新任务状态: fb48cbb5-b96d-4809-9e46-40d0a60e2d54 -> completed
 2025-09-24 02:51:56,132 - __main__ - INFO - 任务完成: fb48cbb5-b96d-4809-9e46-40d0a60e2d54, 结果数: 2
 2025-09-24 02:51:56,132 - __main__ - INFO - 任务处理成功: fb48cbb5-b96d-4809-9e46-40d0a60e2d54
+2025-09-24 03:17:39,188 - __main__ - ERROR - Worker循环错误: Connection closed by server.
+2025-09-24 03:17:52,741 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:18:06,181 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:18:19,751 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:18:33,298 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:18:46,847 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:19:00,378 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:19:13,911 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:32:03,758 - __main__ - ERROR - Worker循环错误: Connection closed by server.
+2025-09-24 03:32:17,290 - __main__ - ERROR - Worker循环错误: Error -2 connecting to redis:6379. Name or service not known.
+2025-09-24 03:32:25,889 - __main__ - INFO - 获取到新任务: 67df63e3-d805-4543-89ff-0d2a6894a6f5
+2025-09-24 03:32:25,890 - __main__ - INFO - 开始处理任务: 67df63e3-d805-4543-89ff-0d2a6894a6f5
+2025-09-24 03:32:25,895 - redis_client - INFO - 更新任务状态: 67df63e3-d805-4543-89ff-0d2a6894a6f5 -> processing
+2025-09-24 03:32:25,896 - __main__ - INFO - 任务详情: 2个URL, 类型: requests
+2025-09-24 03:32:25,897 - redis_client - INFO - 更新任务状态: 67df63e3-d805-4543-89ff-0d2a6894a6f5 -> processing
+2025-09-24 03:32:25,898 - scraper_adapter - INFO - 开始爬取任务: 2个URL, 类型: requests
+2025-09-24 03:32:25,898 - simple_scraper - INFO - 爬取进度: 1/2 - https://httpbin.org/status/404
+2025-09-24 03:32:25,898 - simple_scraper - INFO - 开始爬取: https://httpbin.org/status/404
+2025-09-24 03:32:31,066 - simple_scraper - ERROR - 爬取失败: https://httpbin.org/status/404 - 404 Client Error: NOT FOUND for url: https://httpbin.org/status/404
+2025-09-24 03:32:31,066 - simple_scraper - INFO - 爬取进度: 2/2 - https://example.com
+2025-09-24 03:32:31,066 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 03:32:35,970 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 03:32:35,973 - scraper_adapter - INFO - 爬取任务完成: 成功1个, 失败1个
+2025-09-24 03:32:35,974 - redis_client - INFO - 更新任务状态: 67df63e3-d805-4543-89ff-0d2a6894a6f5 -> processing
+2025-09-24 03:32:35,975 - redis_client - INFO - 存储结果成功: 67df63e3-d805-4543-89ff-0d2a6894a6f5, 共2条结果
+2025-09-24 03:32:35,976 - redis_client - INFO - 更新任务状态: 67df63e3-d805-4543-89ff-0d2a6894a6f5 -> completed
+2025-09-24 03:32:35,976 - __main__ - INFO - 任务完成: 67df63e3-d805-4543-89ff-0d2a6894a6f5, 结果数: 2
+2025-09-24 03:32:35,976 - __main__ - INFO - 任务处理成功: 67df63e3-d805-4543-89ff-0d2a6894a6f5
+2025-09-24 04:17:13,641 - __main__ - INFO - 获取到新任务: 951b9252-27f6-49a0-b850-c32b9645dd3e
+2025-09-24 04:17:13,643 - __main__ - INFO - 开始处理任务: 951b9252-27f6-49a0-b850-c32b9645dd3e
+2025-09-24 04:17:13,645 - redis_client - INFO - 更新任务状态: 951b9252-27f6-49a0-b850-c32b9645dd3e -> processing
+2025-09-24 04:17:13,645 - __main__ - INFO - 任务详情: 5个URL, 类型: requests
+2025-09-24 04:17:13,646 - redis_client - INFO - 更新任务状态: 951b9252-27f6-49a0-b850-c32b9645dd3e -> processing
+2025-09-24 04:17:13,646 - scraper_adapter - INFO - 开始爬取任务: 5个URL, 类型: requests
+2025-09-24 04:17:13,647 - simple_scraper - INFO - 爬取进度: 1/5 - https://example.com
+2025-09-24 04:17:13,647 - simple_scraper - INFO - 开始爬取: https://example.com
+2025-09-24 04:17:18,530 - simple_scraper - INFO - 爬取成功: https://example.com, 标题: Example Domain
+2025-09-24 04:17:18,530 - simple_scraper - INFO - 爬取进度: 2/5 - https://httpbin.org/status/404
+2025-09-24 04:17:18,530 - simple_scraper - INFO - 开始爬取: https://httpbin.org/status/404
+2025-09-24 04:17:23,728 - simple_scraper - ERROR - 爬取失败: https://httpbin.org/status/404 - 404 Client Error: NOT FOUND for url: https://httpbin.org/status/404
+2025-09-24 04:17:23,728 - simple_scraper - INFO - 爬取进度: 3/5 - https://httpbin.org/delay/10
+2025-09-24 04:17:23,728 - simple_scraper - INFO - 开始爬取: https://httpbin.org/delay/10
+2025-09-24 04:17:34,359 - simple_scraper - INFO - 爬取成功: https://httpbin.org/delay/10, 标题: 无标题
+2025-09-24 04:17:34,360 - simple_scraper - INFO - 爬取进度: 4/5 - https://httpbin.org/html
+2025-09-24 04:17:34,360 - simple_scraper - INFO - 开始爬取: https://httpbin.org/html
+2025-09-24 04:17:34,628 - simple_scraper - INFO - 爬取成功: https://httpbin.org/html, 标题: 无标题
+2025-09-24 04:17:34,628 - simple_scraper - INFO - 爬取进度: 5/5 - https://invalid-domain-12345.com
+2025-09-24 04:17:34,628 - simple_scraper - INFO - 开始爬取: https://invalid-domain-12345.com
+2025-09-24 04:17:54,643 - simple_scraper - ERROR - 爬取失败: https://invalid-domain-12345.com - HTTPSConnectionPool(host='invalid-domain-12345.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76b2b1ca4650>: Failed to resolve 'invalid-domain-12345.com' ([Errno -2] Name or service not known)"))
+2025-09-24 04:17:54,643 - scraper_adapter - INFO - 爬取任务完成: 成功3个, 失败2个
+2025-09-24 04:17:54,644 - redis_client - INFO - 更新任务状态: 951b9252-27f6-49a0-b850-c32b9645dd3e -> processing
+2025-09-24 04:17:54,646 - redis_client - INFO - 存储结果成功: 951b9252-27f6-49a0-b850-c32b9645dd3e, 共5条结果
+2025-09-24 04:17:54,646 - redis_client - INFO - 更新任务状态: 951b9252-27f6-49a0-b850-c32b9645dd3e -> completed
+2025-09-24 04:17:54,647 - __main__ - INFO - 任务完成: 951b9252-27f6-49a0-b850-c32b9645dd3e, 结果数: 5
+2025-09-24 04:17:54,647 - __main__ - INFO - 任务处理成功: 951b9252-27f6-49a0-b850-c32b9645dd3e
+2025-09-24 05:29:30,211 - __main__ - INFO - 获取到新任务: ddbe8496-8657-4258-8d76-68a140710cd2
+2025-09-24 05:29:30,243 - __main__ - INFO - 开始处理任务: ddbe8496-8657-4258-8d76-68a140710cd2
+2025-09-24 05:29:30,266 - redis_client - INFO - 更新任务状态: ddbe8496-8657-4258-8d76-68a140710cd2 -> processing
+2025-09-24 05:29:30,267 - __main__ - INFO - 任务详情: 25个URL, 类型: requests
+2025-09-24 05:29:30,267 - redis_client - INFO - 更新任务状态: ddbe8496-8657-4258-8d76-68a140710cd2 -> processing
+2025-09-24 05:29:30,268 - scraper_adapter - INFO - 开始爬取任务: 25个URL, 类型: requests
+2025-09-24 05:29:30,281 - simple_scraper - INFO - 爬取进度: 1/25 - https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA
+2025-09-24 05:29:30,283 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA
+2025-09-24 05:29:36,198 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA, 标题: 
+2025-09-24 05:29:36,200 - simple_scraper - INFO - 爬取进度: 2/25 - https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ
+2025-09-24 05:29:36,200 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ
+2025-09-24 05:29:36,852 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ, 标题: 
+2025-09-24 05:29:36,853 - simple_scraper - INFO - 爬取进度: 3/25 - https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports
+2025-09-24 05:29:36,853 - simple_scraper - INFO - 开始爬取: https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports
+2025-09-24 05:30:13,262 - simple_scraper - ERROR - 爬取失败: https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports - HTTPSConnectionPool(host='money.usnews.com', port=443): Read timed out. (read timeout=30)
+2025-09-24 05:30:13,262 - simple_scraper - INFO - 爬取进度: 4/25 - https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261
+2025-09-24 05:30:13,262 - simple_scraper - INFO - 开始爬取: https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261
+2025-09-24 05:30:19,253 - simple_scraper - INFO - 爬取成功: https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261, 标题: OpenAI announces ChatGPT parental controls following family's lawsuit - ABC News
+2025-09-24 05:30:19,253 - simple_scraper - INFO - 爬取进度: 5/25 - https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/
+2025-09-24 05:30:19,253 - simple_scraper - INFO - 开始爬取: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/
+2025-09-24 05:30:24,539 - simple_scraper - ERROR - 爬取失败: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/ - 403 Client Error: Forbidden for url: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/
+2025-09-24 05:30:24,539 - simple_scraper - INFO - 爬取进度: 6/25 - https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/
+2025-09-24 05:30:24,539 - simple_scraper - INFO - 开始爬取: https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/
+2025-09-24 05:30:30,418 - simple_scraper - INFO - 爬取成功: https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/, 标题: How is artificial intelligence affecting job searches? - CBS News
+2025-09-24 05:30:30,418 - simple_scraper - INFO - 爬取进度: 7/25 - https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml
+2025-09-24 05:30:30,418 - simple_scraper - INFO - 开始爬取: https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml
+2025-09-24 05:30:35,577 - simple_scraper - INFO - 爬取成功: https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml, 标题: 《“人工智能+交通运输”实施意见》经部务会审议通过 加快推动人工智能在交通运输领域规模化创新应用-长江航务管理局
+2025-09-24 05:30:35,577 - simple_scraper - INFO - 爬取进度: 8/25 - https://www.bjnews.com.cn/detail/1756906307129472.html
+2025-09-24 05:30:35,577 - simple_scraper - INFO - 开始爬取: https://www.bjnews.com.cn/detail/1756906307129472.html
+2025-09-24 05:30:41,151 - simple_scraper - INFO - 爬取成功: https://www.bjnews.com.cn/detail/1756906307129472.html, 标题: 不只震撼，九三阅兵还有这些“首次” — 新京报
+2025-09-24 05:30:41,151 - simple_scraper - INFO - 爬取进度: 9/25 - https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml
+2025-09-24 05:30:41,152 - simple_scraper - INFO - 开始爬取: https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml
+2025-09-24 05:30:47,119 - simple_scraper - INFO - 爬取成功: https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml, 标题: AI标识来了 9月1日起AI生成合成内容必须添加标识 多家平台已落实_新闻频道_央视网(cctv.com)
+2025-09-24 05:30:47,119 - simple_scraper - INFO - 爬取进度: 10/25 - https://news.66wz.com/system/2025/09/04/105698673.shtml
+2025-09-24 05:30:47,119 - simple_scraper - INFO - 开始爬取: https://news.66wz.com/system/2025/09/04/105698673.shtml
+2025-09-24 05:30:52,479 - simple_scraper - INFO - 爬取成功: https://news.66wz.com/system/2025/09/04/105698673.shtml, 标题: 温州市揭牌设立市人工智能局 加快建设人工智能创新发展先行市-新闻中心-温州网
+2025-09-24 05:30:52,480 - simple_scraper - INFO - 爬取进度: 11/25 - https://ieeexplore.ieee.org/document/10844369
+2025-09-24 05:30:52,480 - simple_scraper - INFO - 开始爬取: https://ieeexplore.ieee.org/document/10844369
+2025-09-24 05:30:58,211 - simple_scraper - INFO - 爬取成功: https://ieeexplore.ieee.org/document/10844369, 标题: A Semi-Supervised Active Learning Neural Network for Data Streams With Concept Drift | IEEE Journals & Magazine | IEEE Xplore
+2025-09-24 05:30:58,211 - simple_scraper - INFO - 爬取进度: 12/25 - https://www.jos.org.cn/jos/article/pdf/7264
+2025-09-24 05:30:58,211 - simple_scraper - INFO - 开始爬取: https://www.jos.org.cn/jos/article/pdf/7264
+2025-09-24 05:31:15,353 - bs4.dammit - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-09-24 05:31:15,629 - simple_scraper - INFO - 爬取成功: https://www.jos.org.cn/jos/article/pdf/7264, 标题: 无标题
+2025-09-24 05:31:15,629 - simple_scraper - INFO - 爬取进度: 13/25 - https://www.jos.org.cn/jos/article/pdf/7315
+2025-09-24 05:31:15,629 - simple_scraper - INFO - 开始爬取: https://www.jos.org.cn/jos/article/pdf/7315
+2025-09-24 05:33:37,924 - bs4.dammit - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2025-09-24 05:33:38,575 - simple_scraper - INFO - 爬取成功: https://www.jos.org.cn/jos/article/pdf/7315, 标题: 无标题
+2025-09-24 05:33:38,576 - simple_scraper - INFO - 爬取进度: 14/25 - https://www.cac.gov.cn/2025-08/27/c_1758018277755538.htm
+2025-09-24 05:33:38,576 - simple_scraper - INFO - 开始爬取: https://www.cac.gov.cn/2025-08/27/c_1758018277755538.htm
+2025-09-24 05:33:43,740 - simple_scraper - INFO - 爬取成功: https://www.cac.gov.cn/2025-08/27/c_1758018277755538.htm, 标题: 国务院关于深入实施“人工智能+”行动的意见_中央网络安全和信息化委员会办公室
+2025-09-24 05:33:43,741 - simple_scraper - INFO - 爬取进度: 15/25 - https://baijiahao.baidu.com/s?id=1841445630212847979&wfr=spider&for=pc
+2025-09-24 05:33:43,741 - simple_scraper - INFO - 开始爬取: https://baijiahao.baidu.com/s?id=1841445630212847979&wfr=spider&for=pc
+2025-09-24 05:33:54,040 - simple_scraper - INFO - 爬取成功: https://baijiahao.baidu.com/s?id=1841445630212847979&wfr=spider&for=pc, 标题: 百度安全验证
+2025-09-24 05:33:54,040 - simple_scraper - INFO - 爬取进度: 16/25 - https://www.thepaper.cn/newsDetail_forward_31479069
+2025-09-24 05:33:54,042 - simple_scraper - INFO - 开始爬取: https://www.thepaper.cn/newsDetail_forward_31479069
+2025-09-24 05:33:59,147 - simple_scraper - INFO - 爬取成功: https://www.thepaper.cn/newsDetail_forward_31479069, 标题: 马斯克和奥特曼又起冲突，xAI起诉苹果和OpenAI“串通”垄断_未来2%_澎湃新闻-The Paper
+2025-09-24 05:33:59,147 - simple_scraper - INFO - 爬取进度: 17/25 - https://www.sohu.com/a/929376834_485557?scm=10001.341_14-200000.0.0.&spm=smpc.channel_218.block4_113_ugzL7M_1_fd.3.17563669356540qDzYUG_499
+2025-09-24 05:33:59,148 - simple_scraper - INFO - 开始爬取: https://www.sohu.com/a/929376834_485557?scm=10001.341_14-200000.0.0.&spm=smpc.channel_218.block4_113_ugzL7M_1_fd.3.17563669356540qDzYUG_499
+2025-09-24 05:34:04,282 - simple_scraper - INFO - 爬取成功: https://www.sohu.com/a/929376834_485557?scm=10001.341_14-200000.0.0.&spm=smpc.channel_218.block4_113_ugzL7M_1_fd.3.17563669356540qDzYUG_499, 标题: 黄仁勋：Blackwell芯片“确实有可能”入华，看好中国AI市场明年增50%_美国政府_人工智能_公司
+2025-09-24 05:34:04,282 - simple_scraper - INFO - 爬取进度: 18/25 - https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650986961&idx=2&sn=00d3c32b9b44fc02da6ca3602ad1a90a&chksm=84e71dafb39094b9253035787f59e0ffb440b3fa139f6a35b0ede8751c160ced1d5822d305ad#rd
+2025-09-24 05:34:04,283 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650986961&idx=2&sn=00d3c32b9b44fc02da6ca3602ad1a90a&chksm=84e71dafb39094b9253035787f59e0ffb440b3fa139f6a35b0ede8751c160ced1d5822d305ad#rd
+2025-09-24 05:34:10,183 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650986961&idx=2&sn=00d3c32b9b44fc02da6ca3602ad1a90a&chksm=84e71dafb39094b9253035787f59e0ffb440b3fa139f6a35b0ede8751c160ced1d5822d305ad#rd, 标题: 
+2025-09-24 05:34:10,183 - simple_scraper - INFO - 爬取进度: 19/25 - https://baijiahao.baidu.com/s?id=1841605785521578036&wfr=spider&for=pc
+2025-09-24 05:34:10,183 - simple_scraper - INFO - 开始爬取: https://baijiahao.baidu.com/s?id=1841605785521578036&wfr=spider&for=pc
+2025-09-24 05:34:10,278 - simple_scraper - INFO - 爬取成功: https://baijiahao.baidu.com/s?id=1841605785521578036&wfr=spider&for=pc, 标题: 百度安全验证
+2025-09-24 05:34:10,278 - simple_scraper - INFO - 爬取进度: 20/25 - https://mp.weixin.qq.com/s/9Mnl0uHj5xCzM5rTdItN6Q
+2025-09-24 05:34:10,278 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/9Mnl0uHj5xCzM5rTdItN6Q
+2025-09-24 05:34:10,795 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/9Mnl0uHj5xCzM5rTdItN6Q, 标题: 
+2025-09-24 05:34:10,795 - simple_scraper - INFO - 爬取进度: 21/25 - https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg
+2025-09-24 05:34:10,795 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg
+2025-09-24 05:34:11,366 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg, 标题: 
+2025-09-24 05:34:11,366 - simple_scraper - INFO - 爬取进度: 22/25 - https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA
+2025-09-24 05:34:11,367 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA
+2025-09-24 05:34:12,046 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA, 标题: 
+2025-09-24 05:34:12,046 - simple_scraper - INFO - 爬取进度: 23/25 - https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd
+2025-09-24 05:34:12,046 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd
+2025-09-24 05:34:12,680 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd, 标题: 
+2025-09-24 05:34:12,680 - simple_scraper - INFO - 爬取进度: 24/25 - https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd
+2025-09-24 05:34:12,681 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd
+2025-09-24 05:34:13,291 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd, 标题: 
+2025-09-24 05:34:13,292 - simple_scraper - INFO - 爬取进度: 25/25 - https://www.gov.cn/zhengce/content/202508/content_7037861.htm
+2025-09-24 05:34:13,292 - simple_scraper - INFO - 开始爬取: https://www.gov.cn/zhengce/content/202508/content_7037861.htm
+2025-09-24 05:34:18,483 - simple_scraper - INFO - 爬取成功: https://www.gov.cn/zhengce/content/202508/content_7037861.htm, 标题: 国务院关于深入实施“人工智能+”行动的意见_科技_中国政府网
+2025-09-24 05:34:18,496 - scraper_adapter - INFO - 爬取任务完成: 成功23个, 失败2个
+2025-09-24 05:34:18,497 - redis_client - INFO - 更新任务状态: ddbe8496-8657-4258-8d76-68a140710cd2 -> processing
+2025-09-24 05:34:18,501 - redis_client - INFO - 存储结果成功: ddbe8496-8657-4258-8d76-68a140710cd2, 共25条结果
+2025-09-24 05:34:18,501 - redis_client - INFO - 更新任务状态: ddbe8496-8657-4258-8d76-68a140710cd2 -> completed
+2025-09-24 05:34:18,502 - __main__ - INFO - 任务完成: ddbe8496-8657-4258-8d76-68a140710cd2, 结果数: 25
+2025-09-24 05:34:18,502 - __main__ - INFO - 任务处理成功: ddbe8496-8657-4258-8d76-68a140710cd2
+2025-09-24 05:36:39,392 - __main__ - INFO - 获取到新任务: ea685653-42df-438e-b6ed-2f2c2f4d4f6e
+2025-09-24 05:36:39,392 - __main__ - INFO - 开始处理任务: ea685653-42df-438e-b6ed-2f2c2f4d4f6e
+2025-09-24 05:36:39,393 - redis_client - INFO - 更新任务状态: ea685653-42df-438e-b6ed-2f2c2f4d4f6e -> processing
+2025-09-24 05:36:39,393 - __main__ - INFO - 任务详情: 10个URL, 类型: requests
+2025-09-24 05:36:39,393 - redis_client - INFO - 更新任务状态: ea685653-42df-438e-b6ed-2f2c2f4d4f6e -> processing
+2025-09-24 05:36:39,393 - scraper_adapter - INFO - 开始爬取任务: 10个URL, 类型: requests
+2025-09-24 05:36:39,393 - simple_scraper - INFO - 爬取进度: 1/10 - https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA
+2025-09-24 05:36:39,393 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA
+2025-09-24 05:36:44,993 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/lqnPnTC1Ij-m8kqU_dOTKA, 标题: 
+2025-09-24 05:36:44,993 - simple_scraper - INFO - 爬取进度: 2/10 - https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ
+2025-09-24 05:36:44,994 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ
+2025-09-24 05:36:45,502 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/qx3D4yYWLFRANs53yQmQeQ, 标题: 
+2025-09-24 05:36:45,502 - simple_scraper - INFO - 爬取进度: 3/10 - https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports
+2025-09-24 05:36:45,502 - simple_scraper - INFO - 开始爬取: https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports
+2025-09-24 05:37:20,872 - simple_scraper - ERROR - 爬取失败: https://money.usnews.com/investing/news/articles/2025-08-29/chinas-alibaba-develops-new-ai-chip-to-help-fill-nvidia-void-wsj-reports - HTTPSConnectionPool(host='money.usnews.com', port=443): Read timed out. (read timeout=30)
+2025-09-24 05:37:20,873 - simple_scraper - INFO - 爬取进度: 4/10 - https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261
+2025-09-24 05:37:20,873 - simple_scraper - INFO - 开始爬取: https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261
+2025-09-24 05:37:26,812 - simple_scraper - INFO - 爬取成功: https://abcnews.go.com/GMA/Family/openai-announces-chatgpt-parental-controls-familys-lawsuit/story?id=124375261, 标题: OpenAI announces ChatGPT parental controls following family's lawsuit - ABC News
+2025-09-24 05:37:26,813 - simple_scraper - INFO - 爬取进度: 5/10 - https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/
+2025-09-24 05:37:26,813 - simple_scraper - INFO - 开始爬取: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/
+2025-09-24 05:37:32,106 - simple_scraper - ERROR - 爬取失败: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/ - 403 Client Error: Forbidden for url: https://openai.com/index/building-more-helpful-chatgpt-experiences-for-everyone/
+2025-09-24 05:37:32,106 - simple_scraper - INFO - 爬取进度: 6/10 - https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/
+2025-09-24 05:37:32,107 - simple_scraper - INFO - 开始爬取: https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/
+2025-09-24 05:37:38,155 - simple_scraper - INFO - 爬取成功: https://www.cbsnews.com/news/how-is-artificial-intelligence-affecting-job-searches/, 标题: How is artificial intelligence affecting job searches? - CBS News
+2025-09-24 05:37:38,155 - simple_scraper - INFO - 爬取进度: 7/10 - https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml
+2025-09-24 05:37:38,155 - simple_scraper - INFO - 开始爬取: https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml
+2025-09-24 05:37:43,349 - simple_scraper - INFO - 爬取成功: https://cjhy.mot.gov.cn/xw/slxw/202509/t20250901_459007.shtml, 标题: 《“人工智能+交通运输”实施意见》经部务会审议通过 加快推动人工智能在交通运输领域规模化创新应用-长江航务管理局
+2025-09-24 05:37:43,351 - simple_scraper - INFO - 爬取进度: 8/10 - https://www.bjnews.com.cn/detail/1756906307129472.html
+2025-09-24 05:37:43,351 - simple_scraper - INFO - 开始爬取: https://www.bjnews.com.cn/detail/1756906307129472.html
+2025-09-24 05:37:48,579 - simple_scraper - INFO - 爬取成功: https://www.bjnews.com.cn/detail/1756906307129472.html, 标题: 不只震撼，九三阅兵还有这些“首次” — 新京报
+2025-09-24 05:37:48,580 - simple_scraper - INFO - 爬取进度: 9/10 - https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml
+2025-09-24 05:37:48,580 - simple_scraper - INFO - 开始爬取: https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml
+2025-09-24 05:37:53,852 - simple_scraper - INFO - 爬取成功: https://news.cctv.com/2025/09/03/ARTIUvV62pAXPqCDrH1GkRTC250903.shtml, 标题: AI标识来了 9月1日起AI生成合成内容必须添加标识 多家平台已落实_新闻频道_央视网(cctv.com)
+2025-09-24 05:37:53,852 - simple_scraper - INFO - 爬取进度: 10/10 - https://news.66wz.com/system/2025/09/04/105698673.shtml
+2025-09-24 05:37:53,852 - simple_scraper - INFO - 开始爬取: https://news.66wz.com/system/2025/09/04/105698673.shtml
+2025-09-24 05:37:59,142 - simple_scraper - INFO - 爬取成功: https://news.66wz.com/system/2025/09/04/105698673.shtml, 标题: 温州市揭牌设立市人工智能局 加快建设人工智能创新发展先行市-新闻中心-温州网
+2025-09-24 05:37:59,162 - scraper_adapter - INFO - 爬取任务完成: 成功8个, 失败2个
+2025-09-24 05:37:59,163 - redis_client - INFO - 更新任务状态: ea685653-42df-438e-b6ed-2f2c2f4d4f6e -> processing
+2025-09-24 05:37:59,168 - redis_client - INFO - 存储结果成功: ea685653-42df-438e-b6ed-2f2c2f4d4f6e, 共10条结果
+2025-09-24 05:37:59,170 - redis_client - INFO - 更新任务状态: ea685653-42df-438e-b6ed-2f2c2f4d4f6e -> completed
+2025-09-24 05:37:59,171 - __main__ - INFO - 任务完成: ea685653-42df-438e-b6ed-2f2c2f4d4f6e, 结果数: 10
+2025-09-24 05:37:59,172 - __main__ - INFO - 任务处理成功: ea685653-42df-438e-b6ed-2f2c2f4d4f6e
+2025-09-24 05:37:59,177 - __main__ - INFO - 获取到新任务: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad
+2025-09-24 05:37:59,178 - __main__ - INFO - 开始处理任务: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad
+2025-09-24 05:37:59,179 - redis_client - INFO - 更新任务状态: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad -> processing
+2025-09-24 05:37:59,180 - __main__ - INFO - 任务详情: 5个URL, 类型: requests
+2025-09-24 05:37:59,180 - redis_client - INFO - 更新任务状态: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad -> processing
+2025-09-24 05:37:59,180 - scraper_adapter - INFO - 开始爬取任务: 5个URL, 类型: requests
+2025-09-24 05:37:59,181 - simple_scraper - INFO - 爬取进度: 1/5 - https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg
+2025-09-24 05:37:59,181 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg
+2025-09-24 05:38:04,767 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/X8GWbx5na254QXPReL3-bg, 标题: 
+2025-09-24 05:38:04,767 - simple_scraper - INFO - 爬取进度: 2/5 - https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA
+2025-09-24 05:38:04,768 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA
+2025-09-24 05:38:05,136 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s/bwBZjSsctPRCe6b1xB5nxA, 标题: 
+2025-09-24 05:38:05,136 - simple_scraper - INFO - 爬取进度: 3/5 - https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd
+2025-09-24 05:38:05,136 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd
+2025-09-24 05:38:05,667 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987701&idx=2&sn=7f6ce326a6444c894c176b2e2d2d8b03&chksm=84e718cbb39091dd37bd30da502465ed4a4c6b20ce7edbd7bca3af2506a11763c62a6bb01981#rd, 标题: 
+2025-09-24 05:38:05,667 - simple_scraper - INFO - 爬取进度: 4/5 - https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd
+2025-09-24 05:38:05,667 - simple_scraper - INFO - 开始爬取: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd
+2025-09-24 05:38:06,149 - simple_scraper - INFO - 爬取成功: https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650987090&idx=3&sn=fbfd114c75633d1df5578a90bb03fd3d&chksm=84e71e2cb390973a21cfdaf995ed763ffab3fdbfbdafb3d83bbb6aff9a3279aa33ed08885807#rd, 标题: 
+2025-09-24 05:38:06,149 - simple_scraper - INFO - 爬取进度: 5/5 - https://www.gov.cn/zhengce/content/202508/content_7037861.htm
+2025-09-24 05:38:06,149 - simple_scraper - INFO - 开始爬取: https://www.gov.cn/zhengce/content/202508/content_7037861.htm
+2025-09-24 05:38:11,305 - simple_scraper - INFO - 爬取成功: https://www.gov.cn/zhengce/content/202508/content_7037861.htm, 标题: 国务院关于深入实施“人工智能+”行动的意见_科技_中国政府网
+2025-09-24 05:38:11,308 - scraper_adapter - INFO - 爬取任务完成: 成功5个, 失败0个
+2025-09-24 05:38:11,309 - redis_client - INFO - 更新任务状态: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad -> processing
+2025-09-24 05:38:11,311 - redis_client - INFO - 存储结果成功: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad, 共5条结果
+2025-09-24 05:38:11,311 - redis_client - INFO - 更新任务状态: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad -> completed
+2025-09-24 05:38:11,311 - __main__ - INFO - 任务完成: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad, 结果数: 5
+2025-09-24 05:38:11,311 - __main__ - INFO - 任务处理成功: 5ca2b222-e6a1-4c09-ae4f-16e7da0f02ad

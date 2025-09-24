@@ -21,9 +21,9 @@ class Config:
     TASK_EXPIRE_HOURS = 24
     RESULT_EXPIRE_HOURS = 24
     
-    # 支持的爬虫类型（API阶段只支持requests，后续添加）
+    # 支持的爬虫类型（包含竞速模式）
     SUPPORTED_SCRAPERS = [
-        'requests'  # 阶段1只支持requests爬虫
+        'requests', 'newspaper', 'readability', 'trafilatura', 'race'
     ]
     
     # 日志配置

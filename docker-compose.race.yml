@@ -1,0 +1,149 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    networks:
+      - scraper_network
+    
+  api:
+    build: 
+      context: ./api_service
+      dockerfile: Dockerfile.simple
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - API_KEY=demo-api-key-123
+      - FLASK_ENV=production
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - scraper_network
+    
+  # 主Worker - 处理requests任务
+  worker_requests:
+    build: 
+      context: ./worker_service
+      dockerfile: Dockerfile.simple
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - WORKER_TYPE=requests
+      - MAX_WORKERS=3
+      - POLL_INTERVAL=2
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - api
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - scraper_network
+    
+  # 竞速Worker - 处理竞速任务
+  worker_race:
+    build: 
+      context: ./worker_service
+      dockerfile: Dockerfile.simple
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - WORKER_TYPE=race
+      - MAX_WORKERS=3
+      - POLL_INTERVAL=2
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - api
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - scraper_network
+    
+  # 备用Worker - 处理特定爬虫类型
+  worker_newspaper:
+    build: 
+      context: ./worker_service
+      dockerfile: Dockerfile.simple
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - WORKER_TYPE=newspaper
+      - MAX_WORKERS=2
+      - POLL_INTERVAL=5
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - api
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - scraper_network
+    
+  worker_readability:
+    build: 
+      context: ./worker_service
+      dockerfile: Dockerfile.simple
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - WORKER_TYPE=readability
+      - MAX_WORKERS=2
+      - POLL_INTERVAL=5
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - api
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - scraper_network
+    
+  worker_trafilatura:
+    build: 
+      context: ./worker_service
+      dockerfile: Dockerfile.simple
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - WORKER_TYPE=trafilatura
+      - MAX_WORKERS=2
+      - POLL_INTERVAL=5
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - api
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - scraper_network
+
+networks:
+  scraper_network:
+    driver: bridge
+
+volumes:
+  redis_data:
