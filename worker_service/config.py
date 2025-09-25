@@ -18,8 +18,9 @@ class Config:
     
     # Worker配置
     WORKER_TYPE = os.getenv('WORKER_TYPE', 'all')  # all, requests, selenium, etc.
-    MAX_WORKERS = int(os.getenv('MAX_WORKERS', 3))
+    MAX_WORKERS = int(os.getenv('MAX_WORKERS', 5))  # 最大并发工作线程数
     POLL_INTERVAL = int(os.getenv('POLL_INTERVAL', 5))  # 秒
+    URL_CONCURRENT_LIMIT = int(os.getenv('URL_CONCURRENT_LIMIT', 10))  # URL并发爬取限制
     
     # 日志配置
     LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')

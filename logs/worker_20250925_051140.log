@@ -1,0 +1,16 @@
+2025-09-25 05:11:40,720 - __main__ - INFO - 启动普通Worker模式: newspaper
+2025-09-25 05:11:40,731 - redis_client - INFO - Redis连接成功
+2025-09-25 05:11:40,731 - __main__ - INFO - Worker初始化完成，类型: newspaper
+2025-09-25 05:11:40,731 - __main__ - INFO - Worker开始运行...
+2025-09-25 05:11:40,759 - __main__ - INFO - 启动竞速Worker模式
+2025-09-25 05:11:40,760 - __main__ - INFO - 启动普通Worker模式: trafilatura
+2025-09-25 05:11:40,763 - redis_client - INFO - Redis连接成功
+2025-09-25 05:11:40,763 - race_worker - INFO - RaceWorker初始化完成，支持的爬虫: ['requests', 'newspaper', 'readability', 'trafilatura']
+2025-09-25 05:11:40,763 - race_worker - INFO - RaceWorker开始运行...
+2025-09-25 05:11:40,767 - redis_client - INFO - Redis连接成功
+2025-09-25 05:11:40,767 - __main__ - INFO - Worker初始化完成，类型: trafilatura
+2025-09-25 05:11:40,767 - __main__ - INFO - Worker开始运行...
+2025-09-25 05:11:40,830 - __main__ - INFO - 启动普通Worker模式: requests
+2025-09-25 05:11:40,832 - redis_client - INFO - Redis连接成功
+2025-09-25 05:11:40,832 - __main__ - INFO - Worker初始化完成，类型: requests
+2025-09-25 05:11:40,833 - __main__ - INFO - Worker开始运行...

@@ -1,0 +1,12 @@
+2025-09-25 05:11:35,330 - __main__ - INFO - 启动普通Worker模式: readability
+2025-09-25 05:11:35,387 - redis_client - ERROR - Redis连接失败: Redis is loading the dataset in memory
+2025-09-25 05:11:35,387 - __main__ - ERROR - Worker启动失败: Redis is loading the dataset in memory
+2025-09-25 05:11:35,692 - __main__ - INFO - 启动普通Worker模式: newspaper
+2025-09-25 05:11:35,745 - redis_client - ERROR - Redis连接失败: Redis is loading the dataset in memory
+2025-09-25 05:11:35,745 - __main__ - ERROR - Worker启动失败: Redis is loading the dataset in memory
+2025-09-25 05:11:35,780 - __main__ - INFO - 启动竞速Worker模式
+2025-09-25 05:11:35,838 - redis_client - ERROR - Redis连接失败: Redis is loading the dataset in memory
+2025-09-25 05:11:35,838 - __main__ - ERROR - Worker启动失败: Redis is loading the dataset in memory
+2025-09-25 05:11:35,988 - __main__ - INFO - 启动普通Worker模式: trafilatura
+2025-09-25 05:11:36,016 - redis_client - ERROR - Redis连接失败: Redis is loading the dataset in memory
+2025-09-25 05:11:36,017 - __main__ - ERROR - Worker启动失败: Redis is loading the dataset in memory

@@ -9,6 +9,7 @@ import signal
 import sys
 from datetime import datetime
 from typing import Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from config import Config, TaskStatus
 from redis_client import RedisClient
@@ -33,7 +34,9 @@ class Worker:
         self.redis_client = RedisClient()
         self.running = True
         self.current_task_id: Optional[str] = None
-        logger.info(f"Worker初始化完成，类型: {Config.WORKER_TYPE}")
+        # 添加线程池配置
+        self.max_workers = min(Config.MAX_WORKERS, 10)  # 限制最大并发数
+        logger.info(f"Worker初始化完成，类型: {Config.WORKER_TYPE}, 最大并发: {self.max_workers}")
     
     def signal_handler(self, signum, frame):
         """信号处理"""
@@ -79,8 +82,12 @@ class Worker:
                 progress=50
             )
             
-            # 调用爬虫适配器
+            # 调用爬虫适配器（现在支持并发处理）
+            start_time = time.time()
             results = scraper_adapter.scrape_urls(urls, scraper_type, options)
+            elapsed_time = time.time() - start_time
+            
+            logger.info(f"爬取耗时: {elapsed_time:.2f}秒, 平均每个URL: {elapsed_time/len(urls):.2f}秒")
             
             # 检查成功率
             success_count = sum(1 for r in results if r.get('success', False))
